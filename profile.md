@@ -19,3 +19,8 @@ Format for each appended entry:
 
 ---
 <!-- entries below, newest at bottom -->
+
+## 2026-06-14  他这个人说话总是绕弯子……
+- learned : "beat around the bush" = 绕弯子；"get at" = 想表达的意思；"evasive" = 闪烁其词的
+- learned : structure `leave + sb + adj./doing` for 使某人处于某状态
+- preference : (observe) tends to ask produce-intent (中→英) phrasing
