@@ -1,2 +1,6 @@
 .DS_Store
 *.log
+
+# vhs frame-dump artifacts
+demo/preview.png/
+demo/*.mp4

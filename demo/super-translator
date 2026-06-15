@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Mock CLI used ONLY to render the README demo GIF (demo/demo.tape).
+# It reproduces a real Super Translator run so the GIF is deterministic & offline.
+# The actual skill runs inside Claude Code — see ../SKILL.md.
+
+c_head=$'\e[1;36m'   # bold cyan
+c_lbl=$'\e[1;33m'    # bold yellow
+c_zh=$'\e[0;37m'     # grey
+c_en=$'\e[0;32m'     # green
+c_dim=$'\e[2;37m'    # dim
+c_ok=$'\e[1;32m'     # bold green
+r=$'\e[0m'
+
+printf '\n'
+printf '%s🌐 Super Translator%s · anchor: 中文 · intent: produce · lenses: multilingual, register, rewrite, vocab\n\n' "$c_head" "$r"
+
+printf '%sMultilingual anchor block%s\n' "$c_lbl" "$r"
+printf '  %s中文（原意）%s   他说话老是兜圈子、不直说，让人搞不懂他想表达什么。\n' "$c_zh" "$r"
+printf '  %sEnglish (nat.)%s  He always beats around the bush, leaving people unable to follow him.\n' "$c_en" "$r"
+printf '  %sEnglish (i+1)%s   He never says things directly, so he is hard to understand.\n' "$c_en" "$r"
+printf '  %sNuance%s   "绕弯子"→ beat around the bush（地道成语）；比直译 talk in circles 更自然。\n\n' "$c_dim" "$r"
+
+printf '%sRegister & Tone%s\n' "$c_lbl" "$r"
+printf '  neutral，略带抱怨；正式书面可换 "He tends to be evasive / indirect."\n\n'
+
+printf '%sProfessional Rewrite · 语域阶梯%s\n' "$c_lbl" "$r"
+printf '  casual    He always talks in circles — you never know what he is getting at.\n'
+printf '  neutral   He has a habit of beating around the bush, which makes him hard to follow.\n'
+printf '  formal    He tends to be indirect and evasive, leaving his meaning unclear.\n'
+printf '  %s回译核对%s 他习惯绕弯子，让人难以抓住重点 —— 与原意一致 ✓\n\n' "$c_dim" "$r"
+
+printf '%sKey Vocab & Grammar%s\n' "$c_lbl" "$r"
+printf '  • beat around the bush (idiom)  绕弯子，不直说\n'
+printf '  • get at (what sb is getting at)  想表达的意思\n'
+printf '  • leave + sb + adj./doing  使某人处于某状态\n\n'
+
+printf '%s— learning note logged to profile.md —%s\n\n' "$c_ok" "$r"
